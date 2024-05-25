@@ -1,0 +1,830 @@
+/**************************
+Styles for TopBar component 
+***************************/
+
+.topbar-container {
+  background-color: #B3C2CD;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 30px;
+  vertical-align: middle;
+}
+
+.topbar-right {
+  display: flex;
+}
+
+.signup-btn {
+  background-color: transparent;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.login-btn {
+  background-color: transparent;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.signup-btn:hover,
+.login-btn:hover {
+  background-color: #ccc;
+}
+
+/**************************/
+
+/**************************
+Styles for SignUp component 
+***************************/
+
+.signup-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.signup-modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  /* Shadow effect */
+  z-index: 10000;
+}
+
+.signup-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.signup-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.signup-btn,
+.close-btn {
+  background-color: #3b536c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.signup-btn:hover,
+.close-btn:hover {
+  background-color: #3b536c;
+}
+
+
+
+/**************************/
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* App.css */
+
+.App {
+  text-align: left;
+  display: flex;
+  /* Added display flex here */
+  flex-direction: column;
+  /* Keep the direction as column to keep TopBar at the top */
+}
+
+/**************************
+Styles for CreatePlaylist component 
+***************************/
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  /* Shadow effect */
+  width: 400px;
+  position: relative;
+  /* Add position relative */
+}
+
+
+.popup-content {
+  text-align: center;
+}
+
+.popup-content input[type='text'] {
+  width: calc(100% - 40px);
+  /* Adjust width as needed */
+  border: none;
+  /* Remove border */
+  border-bottom: 1px solid #ccc;
+  /* Add bottom border */
+  padding: 10px;
+  /* Add padding */
+  margin-bottom: 20px;
+  /* Add margin */
+}
+
+.close-button {
+  position: absolute;
+  top: 1px;
+  /* Adjust this value to suit your design */
+  right: -9px;
+  /* Adjust this value to suit your design */
+  background: none;
+  border: none;
+  font-size: 18px;
+  /* Adjust this value to suit your design */
+  cursor: pointer;
+  color: #333;
+  /* This is a subtle grey, change as per your UI design */
+}
+
+.popup-buttons {
+  margin-top: 20px;
+}
+
+.popup button {
+  background-color: None;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.popup button:hover {
+  color: #000;
+}
+
+.user-playlists-ul {
+  list-style-type: none;
+  /* Removes default bullet points */
+  padding: 12px;
+  /* Removes default padding */
+  margin: 0;
+  /* Removes default margin, adjust if needed */
+  width: 100%;
+  /* Ensures the ul takes full width of its container */
+}
+
+.user-playlists-ul li {
+  font-size: 1.2em;
+  /* Increases the text size */
+  margin: 10px 0;
+  /* Adds vertical margin for spacing */
+  display: flex;
+  /* Enables flexbox layout */
+  align-items: center;
+  /* Aligns items vertically */
+  cursor: pointer;
+  /* Indicates the items are clickable */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.playlist-name {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.playlist-name :hover {
+  color: #666;
+  transform: translateX(10px);
+}
+
+.playlist-icon {
+  width: 24px;
+  /* Set the size of your icon */
+  height: 24px;
+  /* Set the size of your icon */
+  margin-right: 10px;
+  /* Adds space between the icon and text */
+}
+
+.playlist-icon :hover {
+  cursor: pointer;
+}
+
+/**************************/
+
+/**************************
+Styles for YourPlaylist component 
+***************************/
+
+
+.playlist-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.playlist-popup {
+  position: relative;
+  /* Required for absolute positioning of children */
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 8px;
+  width: 80%;
+  height: 80%;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.playlist-content {
+  overflow-y: auto;
+  flex-basis: 25%;
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+
+.playlist-content ul li,
+.playlist-tracks ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.playlist-title,
+.track-title {
+  flex-grow: 1;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+  /* Smooth transition for color change */
+  cursor: pointer;
+}
+
+.playlist-content img,
+.playlist-tracks img {
+  cursor: pointer;
+  padding-right: 20px;
+}
+
+.playlist-title :hover {
+  color: #666;
+}
+
+.playlist-popup button {
+  padding: 8px 16px;
+  background-color: #3b536c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.playlist-popup button:hover {
+  background-color: #42576e;
+}
+
+.playlist-popup ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.playlist-popup ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid transparent;
+}
+
+.playlist-popup ul li:hover {
+  background-color: #f3f3f3;
+  border-bottom-color: #ddd;
+}
+
+.playlist-tracks {
+  margin-top: 20px;
+  flex-basis: 75%;
+  padding-left: 20px;
+  background-color: #f3f3f3;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding-left: 20px;
+  border-radius: 15px;
+}
+
+.playlist-tracks h2 {
+  margin-top: 5px;
+}
+
+/* New styles for track items */
+.track-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.album-cover {
+  width: 100px;
+  /* Adjust as necessary */
+  height: 70px;
+  /* Adjust as necessary */
+  margin-right: 10px;
+  /* Space between image and track info */
+  /* object-fit: cover; */
+  border-radius: 4px;
+}
+
+.track-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.track-title {
+  flex-grow: 1;
+  /* If you want the title to wrap and not overflow */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.album-name {
+  display: block;
+  /* Or inline-block, depending on desired layout */
+  font-size: 0.8em;
+  /* Smaller text for the album name */
+  color: #666;
+}
+
+.artist-name {
+  display: block;
+  /* Or inline-block, depending on desired layout */
+  font-size: 0.8em;
+  /* Smaller text for the album name */
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.delete-icon-pl {
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.delete-icon-pl-tr {
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  max-height: 30px;
+  max-width: 50px;
+}
+
+/* Favorite styling - more common with your playlist component */
+
+.fav-popup {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 8px;
+  width: 60%;
+  height: 80%;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.delete-icon-fav {
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  /* Smooth transition for hover effects */
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.delete-icon-pl-tr:hover,
+.delete-icon-pl:hover,
+.delete-icon-fav:hover {
+  transform: scale(1.05);
+  /* Slightly enlarge on hover */
+  opacity: 0.7;
+  /* Slightly reduce opacity on hover */
+  filter: brightness(0) saturate(100%) invert(13%) sepia(97%) saturate(7500%) hue-rotate(356deg) brightness(91%) contrast(101%);
+}
+
+.close-icon {
+  position: absolute;
+  top: 10px;
+  /* Adjust as needed */
+  right: 10px;
+  /* Adjust as needed */
+  cursor: pointer;
+  width: 24px;
+  /* Adjust size as needed */
+  height: 24px;
+  /* Adjust size as needed */
+}
+
+/* Optional: Add hover effect for the close icon */
+.close-icon:hover {
+  opacity: 0.6;
+  filter: brightness(0) saturate(100%) invert(13%) sepia(97%) saturate(7500%) hue-rotate(356deg) brightness(91%) contrast(101%);
+}
+
+
+
+/**************************/
+
+.favorite-content {
+  /* Add styles for the favorite content container */
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+
+.favorite-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.favorite-content li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.favorite-content li:hover {
+  background-color: #f0f0f0;
+  /* Change background color on hover */
+}
+
+.track-info {
+  flex-grow: 1;
+}
+
+.track-info h3 {
+  margin: 0;
+}
+
+.track-info p {
+  margin: 0;
+}
+
+.track-info img {
+  width: 60px;
+  /* Adjust the width of the image */
+  height: 60px;
+  /* Adjust the height of the image */
+  border-radius: 8px;
+  /* Add rounded corners to the image */
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+/**************************/
+
+
+.app-content {
+  display: flex;
+  flex-direction: row;
+  /* Sidebar and music grid side by side */
+}
+
+.music-grid {
+  display: grid;
+  /* grid-template-columns: repeat(5, 1fr); */
+  /* 5 columns */
+  grid-gap: 20px;
+  /* spacing between grid items */
+  flex-grow: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@media (max-width: 4000px) {
+  .music-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .music-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .music-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .music-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .music-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.music-card {
+  background-color: #f4f4f4;
+  padding-bottom: 40px;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  position: relative;
+}
+
+.music-card:hover {
+  transform: translateY(-5px);
+}
+
+.music-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.music-card h2 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.music-card h3 {
+  font-size: 14px;
+  color: #666;
+}
+
+.music-card p {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.music-card .explicit-icon-container {
+  width: 20px;
+  /* Adjust width as needed */
+  height: auto;
+  /* Height will adjust according to the aspect ratio */
+  display: inline-block;
+  /* Or flex, depending on your layout */
+  position: relative;
+}
+
+.add-to-playlist {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 30px;
+  /* Adjust the width and height of the icon as needed */
+  height: 30px;
+  cursor: pointer;
+  visibility: visible;
+}
+
+.add-to-playlist :hover {
+  opacity: 0.6;
+  filter: brightness(0) saturate(100%) invert(13%) sepia(97%) saturate(7500%) hue-rotate(356deg) brightness(91%) contrast(101%);
+}
+
+.favourite {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 30px;
+  /* Adjust the width and height of the icon as needed */
+  height: 30px;
+  cursor: pointer;
+  visibility: visible;
+}
+
+.favourite :hover {
+  opacity: 0.6;
+  filter: brightness(0) saturate(100%) invert(13%) sepia(97%) saturate(7500%) hue-rotate(356deg) brightness(91%) contrast(101%);
+}
+
+/**************************
+Styles for SearchBar component 
+***************************/
+
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 40px;
+}
+
+.search-bar-container input {
+  width: 400px;
+  /* Adjust the width as needed */
+  padding: 10px;
+  border: none;
+  /* Remove the border */
+  border-bottom: 1px solid #ccc;
+  /* Add a bottom border */
+  font-size: 16px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.search-bar-container input:focus {
+  outline: none;
+  border-bottom-color: #007bff;
+  /* Change bottom border color on focus */
+}
+
+/**************************
+Styles for SideBar component 
+***************************/
+
+.sidebar {
+  background-color: #EAEAEA;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  margin-left: 10px;
+  height: auto;
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+/* .sidebar li:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.05);
+} */
+
+.sidebar a {
+  text-decoration: none;
+  color: #666;
+  font-size: 1rem;
+}
+
+.sidebar a:hover {
+  color: #000;
+  transform: scale(1.5);
+}
+
+/***************************/
+
+/**************************
+Styles for Pagination component 
+***************************/
+
+.pagination-nav {
+  text-align: center !important;
+  /* Center align the pagination */
+  padding: 20px 0;
+  /* Give some vertical padding */
+}
+
+.pagination {
+  display: inline-block;
+  /* Center the pagination horizontally */
+  padding-left: 0;
+  /* Remove default padding */
+  list-style: none;
+  /* Remove default list style */
+}
+
+.page-item {
+  display: inline;
+  /* Place all page items in a line */
+}
+
+.page-link {
+  background-color: transparent;
+  /* Remove any background color */
+  border: none;
+  /* Remove borders */
+  color: #007bff;
+  /* Bootstrap primary color, or choose your own */
+  cursor: pointer;
+  padding: 5px 10px;
+  /* Padding for better touch area */
+  margin: 0 5px;
+  /* Space out the links */
+  transition: color 0.3s, transform 0.3s;
+  /* Smooth transition for hover effects */
+  display: flex;
+  /* Use flexbox for centering */
+  align-items: center;
+  /* Vertical centering */
+}
+
+.page-link:hover,
+.page-link:focus {
+  color: #0056b3;
+  /* A darker shade for hover */
+  transform: translateY(-2px);
+  /* Slight raise effect on hover */
+  text-decoration: none;
+  /* Optional: remove underline */
+}
+
+/***************************/
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
