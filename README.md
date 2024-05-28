@@ -25,7 +25,7 @@ To see video in better quality : [Youtube](https://www.youtube.com/watch?v=PCOYw
 
 ## Data Processing and EDA
 
-The data has been take from the Kaggle dataset : [Top 10000 Songs on Spotify 1960-Now](https://www.kaggle.com/datasets/joebeachcapital/top-10000-spotify-songs-1960-now)\
+The data has been taken from the Kaggle dataset : [Top 10000 Songs on Spotify 1960-Now](https://www.kaggle.com/datasets/joebeachcapital/top-10000-spotify-songs-1960-now)\
 However, for the purpose of this application we consider the top 200 most popular records and 10 of the attributes.\
 We incorporate **normalisation** concepts and introduce **integrity constraints** in our database.
 
